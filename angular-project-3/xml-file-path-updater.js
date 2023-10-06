@@ -52,8 +52,8 @@ function appendPathSegmentToXml(xmlFilePath, newPathSegment) {
 }
 
 // Example usage:
-const xmlFilePath = '../coverage/angular-project-1.xml';
-const newPathSegment = 'angular-project-1';
+const xmlFilePath = '../coverage/angular-project-3.xml';
+const newPathSegment = 'angular-project-3';
 
 // Call the function with the desired XML file and new path segment
 appendPathSegmentToXml(xmlFilePath, newPathSegment);

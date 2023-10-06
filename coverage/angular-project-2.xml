@@ -1,8 +1,8 @@
-<?xml version='1.0'?>
-<testExecutions version='1'>
-    <file path='src/app/app.component.spec.ts'>
-        <testCase name='AppComponent should have as title &apos;angular-project-2&apos;' duration='89'/>
-        <testCase name='AppComponent should create the app' duration='8'/>
-        <testCase name='AppComponent should render title' duration='8'/>
-    </file>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testExecutions version="1">
+  <file path="angular-project-2/src/app/app.component.spec.ts">
+    <testCase name="AppComponent should have as title 'angular-project-2'" duration="66"/>
+    <testCase name="AppComponent should create the app" duration="6"/>
+    <testCase name="AppComponent should render title" duration="6"/>
+  </file>
 </testExecutions>

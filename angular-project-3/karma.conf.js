@@ -29,7 +29,7 @@ module.exports = function(config) {
             reports: ['html', 'lcovonly', 'text-summary'],
 
             // base output directory. If you include %browser% in the path it will be replaced with the karma browser name
-            dir: path.join(__dirname, '../coverage/angular-project-2/test/component'),
+            dir: path.join(__dirname, '../coverage/angular-project-3/test/component'),
 
             // Combines coverage information from multiple browsers into one report rather than outputting a report
             // for each browser.
@@ -52,7 +52,7 @@ module.exports = function(config) {
             }
         },
         junitReporter: {
-            outputDir: '../coverage/angular-project-2/test-junit-reports', // results will be saved as $outputDir/$browserName.xml
+            outputDir: '../coverage/angular-project-3/test-junit-reports', // results will be saved as $outputDir/$browserName.xml
             outputFile: undefined, // if included, results will be saved as $outputDir/$browserName/$outputFile
             useBrowserName: false, // add browser name to report and classes names
         },
@@ -62,7 +62,7 @@ module.exports = function(config) {
             encoding: 'utf-8', // test files encoding
             outputFolder: '../coverage', // report destination
             legacyMode: false, // report for Sonarqube < 6.2 (disabled)
-            reportName: (metadata) => 'angular-project-2.xml'
+            reportName: (metadata) => 'angular-project-3.xml'
         },
 
         reporters: ['spec', 'sonarqube', 'coverage-istanbul', 'junit', 'progress', 'kjhtml'],

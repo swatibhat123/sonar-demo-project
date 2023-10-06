@@ -38,8 +38,8 @@ function processLcovFile(filePath, pathToAppend) {
 }
 
 // Specify the paths to the LCOV files and the paths to append
-const filePath = '../coverage/angular-project-1/test/component/lcov.info';
-const  pathToAppend = 'angular-project-1/';
+const filePath = '../coverage/angular-project-3/test/component/lcov.info';
+const  pathToAppend = 'angular-project-3/';
 
 processLcovFile(filePath, pathToAppend);
 
