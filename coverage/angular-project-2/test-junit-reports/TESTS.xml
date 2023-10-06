@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 117.0.5938.149 (Mac OS 10.15.7)" package="" timestamp="2023-10-06T07:15:28" id="0" hostname="Swatis-MacBook-Pro.local" tests="3" errors="0" failures="0" time="0.105">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/117.0.5938.149 Safari/537.36"/>
+  </properties>
+  <testcase name="AppComponent should have as title 'angular-project-2'" time="0.089" classname="AppComponent"/>
+  <testcase name="AppComponent should create the app" time="0.008" classname="AppComponent"/>
+  <testcase name="AppComponent should render title" time="0.008" classname="AppComponent"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
