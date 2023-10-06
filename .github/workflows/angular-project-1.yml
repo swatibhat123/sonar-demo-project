@@ -7,14 +7,62 @@ on:
       - .github/workflows/angular-project-1.yml
       - sonar-project.properties
 name: Main Workflow
+
+env:
+  NODE_VERSION: 16.19.1
 jobs:
+  build:
+    name: Build
+    needs: [ GitSecretsScan ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v2.3.4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup node and npm
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install Dependencies
+        working-directory: angular-project-1
+        run: npm install
+
+      - name: test angular element
+        working-directory: angular-project-1
+        run: npm run test
+
+      - name: update file path for lcov file
+        working-directory: angular-project-1
+        run: npm run update-lcov-file-path
+
+      - name: update file path for xml file
+        working-directory: angular-project-1
+        run: npm run update-xml-file-path
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage-report
+          path: coverage
+
   sonarqube:
     runs-on: ubuntu-latest
+    needs: [build]
     steps:
       - uses: actions/checkout@v3
         with:
           # Disabling shallow clone is recommended for improving relevancy of reporting.
-          fetch-depth: 0
+          fetch-depth: 2
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: coverage-report
+          path: coverage
 
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Scan
