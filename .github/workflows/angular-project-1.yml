@@ -17,13 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout codebase
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3
         with:
           submodules: true
           fetch-depth: 0
 
       - name: Setup node and npm
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -44,7 +44,7 @@ jobs:
         run: npm run update-xml-file-path
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: coverage-report
           path: coverage
@@ -59,7 +59,7 @@ jobs:
           fetch-depth: 2
 
       - name: Download Artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: coverage-report
           path: coverage
