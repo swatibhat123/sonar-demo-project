@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - .github/workflows/angular-project-1.yml
+      - sonar-project.properties
 name: Main Workflow
 jobs:
   sonarqube:
